@@ -26,7 +26,7 @@ const OptionList = styled.div<{ isOpen: boolean }>`
 
 const Option = styled.div`
   /* Styles */
-  padding: 8px;
+  padding: 9px;
   cursor: pointer;
   
   border: 0.1px solid #000000;
