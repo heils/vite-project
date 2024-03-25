@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { CardProps } from "./Card.types";
-import { Button } from "../Button/Button";
+import { Button } from "../Button";
 
 const StyledCard = styled.div<CardProps>`
   display: flex;
