@@ -17,8 +17,8 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     options: [
-      { label: 'Option 1', value: 'option1' },
-      { label: 'Option 2', value: 'option2' },
+      { label: 'Email', value: 'email' },
+      { label: 'Phone', value: 'phone' },
     ],
     name: "test",
   },
@@ -28,8 +28,8 @@ export const Default: Story = {
 export const Disabled: Story = {
   args: {
     options: [
-      { label: 'Option 1', value: 'option1', disabled: true },
-      { label: 'Option 2', value: 'option2' },
+      { label: 'Email', value: 'email', disabled: true },
+      { label: 'Phone', value: 'phone' },
     ],
     name: "test2",
   },

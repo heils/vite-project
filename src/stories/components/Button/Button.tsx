@@ -5,8 +5,8 @@ import { ButtonProps } from './Button.types';
 const StyledButton = styled.button<ButtonProps>`
   background-color: ${props => props.primary ? '#4132ea' : 'transparent'};
   color: ${props => props.primary ? '#fff' : '#000'};
-  height: ${props => props.size === 'large' ? '64px' : '48px'};
-  width: ${props => props.size === 'large' ? '160px' : '120px'};
+  height: 48px;
+  width: 120px;
   border-radius: 12px;
   border: none;
   cursor: ${props => props.disabled ? 'not-allowed' : 'pointer'};
@@ -29,14 +29,14 @@ const StyledButton = styled.button<ButtonProps>`
 
 export const Button: React.FC<ButtonProps> = ({
   primary = false,
-  size = 'small',
+
   backgroundColor,
   label,
   disabled = false,
   ...props
 }) => {
   return (
-    <StyledButton primary={primary} size={size} disabled={disabled} {...props}>
+    <StyledButton primary={primary}  disabled={disabled} {...props}>
       {label}
     </StyledButton>
   );

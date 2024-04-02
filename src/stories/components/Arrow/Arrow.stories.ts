@@ -1,19 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { fn } from '@storybook/test';
-import { Button } from './Button';
+import { Arrow } from './Arrow';
 
 const meta = {
-  title: 'Components/Button',
-  component: Button,
+  title: 'Components/Arrow',
+  component: Arrow,
   parameters: {
     layout: 'centered',
   },
   tags: ['autodocs'],
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
-  args: { onClick: fn() },
-} satisfies Meta<typeof Button>;
+} satisfies Meta<typeof Arrow>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -21,13 +16,11 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     primary: true,
-    label: 'Button',
   },
 };
 
 export const Disabled: Story = {
   args:{
     disabled: true,
-    label: 'Button',
   },
 };

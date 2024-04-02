@@ -8,6 +8,7 @@ const StyledDropdown = styled.div<DropdownProps>`
   margin-top: 200px;
   height: 200px;
   width: 90px;
+  
 `;
 
 const OptionList = styled.div<{ isOpen: boolean }>`
@@ -17,20 +18,18 @@ const OptionList = styled.div<{ isOpen: boolean }>`
   top: ${({ isOpen }) => (isOpen ? "calc(100% - 360px)" : "calc(100% + 5px)")};
   left: 0;
   width: 100%;
-  background-color: #ffffff;
   border: 1px solid #d9d9d9;
   border-radius: 4px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1;
+  
 `;
 
 const Option = styled.div`
   /* Styles */
   padding: 9px;
   cursor: pointer;
-  
-  border: 0.1px solid #000000;
-
+  background-color: #D9D9D9;
   &:hover {
     background-color: #bfbfbf; /* lighter shade when hovered */
   }
