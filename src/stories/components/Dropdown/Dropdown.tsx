@@ -1,5 +1,3 @@
-// Dropdown.tsx
-
 import React, { useState, useRef } from "react";
 import styled from "styled-components";
 import { DropdownProps } from "./Dropdown.types";
@@ -8,7 +6,6 @@ const StyledDropdown = styled.div<DropdownProps>`
   margin-top: 200px;
   height: 200px;
   width: 90px;
-  
 `;
 
 const OptionList = styled.div<{ isOpen: boolean }>`
@@ -22,14 +19,13 @@ const OptionList = styled.div<{ isOpen: boolean }>`
   border-radius: 4px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1;
-  
 `;
 
 const Option = styled.div`
   /* Styles */
   padding: 9px;
   cursor: pointer;
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   &:hover {
     background-color: #bfbfbf; /* lighter shade when hovered */
   }
@@ -37,16 +33,17 @@ const Option = styled.div`
 
 const Dropdown: React.FC<DropdownProps> = ({
   options,
-  search = "small",
-  selection,
   value,
   setValue,
+  disabled = false, // Add disabled prop with default value false
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const toggleDropdown = () => {
-    setIsOpen(!isOpen);
+    if (!disabled) { // Check if dropdown is not disabled before toggling
+      setIsOpen(!isOpen);
+    }
   };
 
   const handleOptionClick = (option: any) => {
@@ -73,7 +70,9 @@ const Dropdown: React.FC<DropdownProps> = ({
 
   return (
     <StyledDropdown options={options} setValue={setValue} ref={dropdownRef}>
-      <div onClick={toggleDropdown}>{value || "Menu"}</div>
+      <div onClick={toggleDropdown} style={{ pointerEvents: disabled ? 'none' : 'auto', opacity: disabled ? 0.5 : 1 }}>
+        {value || "Menu"}
+      </div>
       <OptionList isOpen={isOpen}>
         {isOpen &&
           options.map((option: any, index: number) => (

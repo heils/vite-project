@@ -51,14 +51,12 @@ export const Card = ({
       <StyledButtonContainer>
         <Button
           primary={true}
-          size={"small"}
           disabled={disabled}
           {...props}
           label="Code"
         ></Button>
         <StyledButton
           primary={true}
-          size={"small"}
           disabled={disabled}
           {...props}
           label="Website"

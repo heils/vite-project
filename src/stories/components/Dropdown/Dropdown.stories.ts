@@ -23,3 +23,13 @@ export const Default: Story = {
         { text: 'White', value: 'Contact' }]
   },
 };
+
+export const Disabled: Story = {
+  args: {
+    options : [
+        { text: 'Blue', value: 'Home' },
+        { text: 'Red', value: 'About' },
+        { text: 'White', value: 'My Projects' },
+        { text: 'White', value: 'Contact' }], disabled :'true'
+  },
+};
