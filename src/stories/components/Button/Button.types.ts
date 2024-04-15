@@ -6,4 +6,4 @@ interface ButtonProps {
     onClick?: () => void;
   }
   
-  export type { ButtonProps };
+export type { ButtonProps };

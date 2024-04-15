@@ -7,6 +7,9 @@ const meta = {
   parameters: {
     layout: "centered",
   },
+  argTypes: {
+    backgroundColor: { control: 'color' },
+  },
   tags: ["autodocs"],
 } satisfies Meta<typeof Table>;
 

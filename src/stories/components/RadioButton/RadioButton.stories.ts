@@ -5,6 +5,9 @@ const meta: Meta = {
   title: 'Components/RadioButton',
   component: RadioButton,
   tags: ['autodocs'],
+  argTypes: {
+    backgroundColor: {control: 'color'},
+  },
   parameters: {
     layout: 'centered',
   },

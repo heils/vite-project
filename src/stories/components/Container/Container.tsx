@@ -25,8 +25,6 @@ const StyledText = styled.div<ContainerProps>`
 
 export const Container = ({
   description = "DescriptionLorem Ipsum is simply dummy text of the sheets containing Lorem Ipsum.",
-  disabled = false,
-  ...props
 }: ContainerProps) => {
   return (
     <FlexContainer>

@@ -5,6 +5,9 @@ const meta: Meta = {
   title: "Components/Dropdown",
   component: Dropdown,
   tags: ["autodocs"],
+  argTypes: {
+    backgroundColor: { control: 'color' },
+  },
   parameters: {
     layout: "centered",
   },

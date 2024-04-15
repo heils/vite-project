@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react';
-import HeroImage from './HeroImage';
+import Image from './Image';
 
 const meta: Meta = {
-  title: 'Components/HeroImage',
-  component: HeroImage,
+  title: 'Components/Image',
+  component: Image,
   tags: ['autodocs'],
   argTypes: {
     backgroundColor: { control: 'color' },
@@ -11,7 +11,7 @@ const meta: Meta = {
   parameters: {
     layout: 'centered',
   },
-} satisfies Meta<typeof HeroImage>;
+} satisfies Meta<typeof Image>;
 
 export default meta;
 

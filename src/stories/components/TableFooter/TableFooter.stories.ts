@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react';
-import HeroImage from './HeroImage';
+import TableFooter from './TableFooter';
 
 const meta: Meta = {
-  title: 'Components/HeroImage',
-  component: HeroImage,
+  title: 'Components/TableFooter',
+  component: TableFooter,
   tags: ['autodocs'],
   argTypes: {
     backgroundColor: { control: 'color' },
@@ -11,7 +11,7 @@ const meta: Meta = {
   parameters: {
     layout: 'centered',
   },
-} satisfies Meta<typeof HeroImage>;
+} satisfies Meta<typeof TableFooter>;
 
 export default meta;
 
@@ -20,13 +20,13 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
     args: {
       disabled: false,
-      size: 'large',
+      content: 'Footer content',
     },
   };
   export const Disabled: Story = {
     args:{
       disabled: true,
-      size: 'small',
+      content: 'Footer content',
     },
   };
   

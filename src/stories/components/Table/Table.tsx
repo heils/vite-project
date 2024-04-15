@@ -1,43 +1,26 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import { TableProps } from './Table.types';
+import { TableProps } from "./Table.types";
+import { TableHeader } from "../TableHeader";
+import { TableRow } from "../TableRow"
+import { TableCell } from "../TableCell";
+import { TableFooter } from "../TableFooter";
 
-// Styled components
 const StyledTable = styled.div.attrs<{ isDisabled: boolean }>((props) => ({
   as: "div",
-  isDisabled: props.isDisabled
+  isDisabled: props.isDisabled,
 }))`
   table {
-    width: 100%;
+    width: 100%;s
     border-collapse: collapse;
-    border: 1px solid blue; /* Border color */
-  }
-
-  th,
-  td {
-    padding: 8px;
-    text-align: left;
-    border-bottom: 1px solid gray; /* Border color */
-  }
-
-  th {
-    background-color: blue; /* Header background color */
-    color: white; /* Header text color */
-  }
-
-  tr:nth-child(even) {
-    background-color: lightgray; /* Even row background color */
-  }
-
-  tr:hover {
-    background-color: #f2f2f2; /* Hovered row background color */
+    border: 1px solid blue;
   }
 
   ${({ isDisabled }) =>
     isDisabled &&
     css`
-      opacity: 0.5; /* Dim the table if disabled */
-      pointer-events: none; /* Disable pointer events */
+      opacity: 0.5;
+      pointer-events: none;
     `}
 `;
 
@@ -46,21 +29,26 @@ const Table: React.FC<TableProps> = ({ columns, data, disabled }) => {
     <StyledTable isDisabled={disabled}>
       <table>
         <thead>
-          <tr>
+          <TableRow>
             {columns.map((column) => (
-              <th key={column.key}>{column.title}</th>
+              <TableHeader key={column.key} title={column.title} />
             ))}
-          </tr>
+          </TableRow>
         </thead>
         <tbody>
           {data.map((row, rowIndex) => (
-            <tr key={rowIndex}>
+            <TableRow key={rowIndex}>
               {row.map((cell, cellIndex) => (
-                <td key={cellIndex}>{cell}</td>
+                <TableCell key={cellIndex}>{cell}</TableCell>
               ))}
-            </tr>
+            </TableRow>
           ))}
         </tbody>
+        <TableFooter>
+          <TableRow>
+            <TableCell colSpan={columns.length}>Footer Content</TableCell>
+          </TableRow>
+        </TableFooter>
       </table>
     </StyledTable>
   );

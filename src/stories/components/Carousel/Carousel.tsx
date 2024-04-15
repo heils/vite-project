@@ -15,9 +15,7 @@ const StyledCardWrapper = styled.div`
 `;
 
 export const Carousel = ({
-  description = "DescriptionLorem Ipsum is simply dummy text of the sheets containing Lorem Ipsum.",
   disabled = false,
-  ...props
 }: CarouselProps) => {
   return (
     <StyledCarousel>

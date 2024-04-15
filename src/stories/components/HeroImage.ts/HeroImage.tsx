@@ -11,7 +11,7 @@ const StyledHeroImage = styled.div<HeroImageProps>`
   margin: 0 auto;
 `;
 
-const HeroImage: React.FC<HeroImageProps> = ({ size = 'large', disabled = false }) => {
+const HeroImage: React.FC<HeroImageProps> = ({ size = 'large'}) => {
   return <StyledHeroImage size={size} ><img src={Image}/>
   </StyledHeroImage>
 };
