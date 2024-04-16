@@ -14,9 +14,7 @@ const StyledCardWrapper = styled.div`
   align-items: center;
 `;
 
-export const Carousel = ({
-  disabled = false,
-}: CarouselProps) => {
+export const Carousel = ({ disabled = false }: CarouselProps) => {
   return (
     <StyledCarousel>
       <StyledCardWrapper>

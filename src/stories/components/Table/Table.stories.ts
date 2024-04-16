@@ -8,7 +8,7 @@ const meta = {
     layout: "centered",
   },
   argTypes: {
-    backgroundColor: { control: 'color' },
+    backgroundColor: { control: "color" },
   },
   tags: ["autodocs"],
 } satisfies Meta<typeof Table>;
@@ -27,21 +27,20 @@ export const Default: Story = {
       ["lorem", "lorem"],
       ["lorem", "lorem"],
     ],
-    disabled:false
+    disabled: false,
   },
 };
 export const Disabled: Story = {
-    args: {
-      columns: [
-        { key: "c1", title: "Column 1" },
-        { key: "c2", title: "Column 2" },
-      ],
-      data: [
-        ["lorem", "lorem"],
-        ["lorem", "lorem"],
-        ["lorem", "lorem"],
-      ],
-      disabled: true
-    },
-  };
-  
+  args: {
+    columns: [
+      { key: "c1", title: "Column 1" },
+      { key: "c2", title: "Column 2" },
+    ],
+    data: [
+      ["lorem", "lorem"],
+      ["lorem", "lorem"],
+      ["lorem", "lorem"],
+    ],
+    disabled: true,
+  },
+};

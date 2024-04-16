@@ -1,15 +1,15 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { Card } from './Card';
+import type { Meta, StoryObj } from "@storybook/react";
+import { Card } from "./Card";
 
 const meta: Meta = {
-  title: 'Components/Card',
+  title: "Components/Card",
   component: Card,
   parameters: {
-    layout: 'centered',
+    layout: "centered",
   },
-  tags: ['autodocs'],
+  tags: ["autodocs"],
   argTypes: {
-    backgroundColor: {control: 'color'},
+    backgroundColor: { control: "color" },
   },
 };
 
@@ -18,12 +18,12 @@ type Story = StoryObj<typeof meta>;
 
 export const Normal: Story = {
   args: {
-    size: 'normal',
+    size: "normal",
   },
 };
 
 export const Disabled: Story = {
   args: {
     disabled: true,
-  }
-}
+  },
+};

@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
-import { RadioButtonProps } from './RadioButton.types';
+import { RadioButtonProps } from "./RadioButton.types";
 
 const RadioContainer = styled.div`
   display: flex;
@@ -8,15 +8,15 @@ const RadioContainer = styled.div`
 `;
 
 const RadioGroup = styled.div`
-  background-color: #f0f0f0; 
-  border-radius: 8px; 
-  padding: 10px; 
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 10px;
 `;
 
 const RadioLabel = styled.label`
   margin-bottom: 8px;
-  color: #333; 
-  font-size: 16px; 
+  color: #333;
+  font-size: 16px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -37,7 +37,12 @@ export const RadioButton: React.FC<RadioButtonProps> = ({ options, name }) => {
       <RadioGroup>
         {options.map((option, index) => (
           <RadioLabel key={index}>
-            <RadioInput type="radio" name={name} value={option.value} disabled={option.disabled} />
+            <RadioInput
+              type="radio"
+              name={name}
+              value={option.value}
+              disabled={option.disabled}
+            />
             <RadioText>{option.label}</RadioText>
           </RadioLabel>
         ))}

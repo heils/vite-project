@@ -2,7 +2,7 @@ import React from "react";
 import styled, { css } from "styled-components";
 import { TableProps } from "./Table.types";
 import { TableHeader } from "../TableHeader";
-import { TableRow } from "../TableRow"
+import { TableRow } from "../TableRow";
 import { TableCell } from "../TableCell";
 import { TableFooter } from "../TableFooter";
 

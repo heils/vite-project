@@ -1,15 +1,15 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { Arrow } from './Arrow';
+import type { Meta, StoryObj } from "@storybook/react";
+import { Arrow } from "./Arrow";
 
 const meta = {
-  title: 'Components/Arrow',
+  title: "Components/Arrow",
   component: Arrow,
   parameters: {
-    layout: 'centered',
+    layout: "centered",
   },
-  tags: ['autodocs'],
+  tags: ["autodocs"],
   argTypes: {
-    backgroundColor: { control: 'color' },
+    backgroundColor: { control: "color" },
   },
 } satisfies Meta<typeof Arrow>;
 
@@ -23,7 +23,7 @@ export const Primary: Story = {
 };
 
 export const Disabled: Story = {
-  args:{
+  args: {
     disabled: true,
   },
 };

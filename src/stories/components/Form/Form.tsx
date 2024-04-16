@@ -63,7 +63,8 @@ export const Form = ({
             options={[
               { label: "Email", value: "email" },
               { label: "Phone", value: "phone" },
-            ]} {...props}
+            ]}
+            {...props}
           ></RadioButton>
           <FlexContainer>
             <StyledInput style={{ marginBottom: "6px" }} />

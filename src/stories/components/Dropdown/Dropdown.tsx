@@ -41,7 +41,8 @@ const Dropdown: React.FC<DropdownProps> = ({
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const toggleDropdown = () => {
-    if (!disabled) { // Check if dropdown is not disabled before toggling
+    if (!disabled) {
+      // Check if dropdown is not disabled before toggling
       setIsOpen(!isOpen);
     }
   };
@@ -70,7 +71,13 @@ const Dropdown: React.FC<DropdownProps> = ({
 
   return (
     <StyledDropdown options={options} setValue={setValue} ref={dropdownRef}>
-      <div onClick={toggleDropdown} style={{ pointerEvents: disabled ? 'none' : 'auto', opacity: disabled ? 0.5 : 1 }}>
+      <div
+        onClick={toggleDropdown}
+        style={{
+          pointerEvents: disabled ? "none" : "auto",
+          opacity: disabled ? 0.5 : 1,
+        }}
+      >
         {value || "Menu"}
       </div>
       <OptionList isOpen={isOpen}>

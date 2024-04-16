@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { TableRowProps } from './TableRow.types';
+import React from "react";
+import styled from "styled-components";
+import { TableRowProps } from "./TableRow.types";
 
 const StyledTableRow = styled.tr`
   &:nth-child(even) {

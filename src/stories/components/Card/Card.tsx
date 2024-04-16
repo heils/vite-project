@@ -31,13 +31,11 @@ const StyledButtonContainer = styled.div`
   display: flex;
   align-items: center;
   width: 90%;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
   justify-content: space-between;
 `;
 
-const StyledButton = styled(Button)`
-
-`;
+const StyledButton = styled(Button)``;
 
 export const Card = ({
   description = "DescriptionLorem Ipsum is simply dummy text of the sheets containing Lorem Ipsum.",

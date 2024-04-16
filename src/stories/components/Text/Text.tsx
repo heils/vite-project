@@ -18,14 +18,14 @@ const StyledText = styled.span<TextProps>`
   ${(props) =>
     props.primary &&
     css`
-      color: #000000; 
+      color: #000000;
     `}
 
     ${(props) =>
     !props.primary &&
     css`
       background: #000000;
-      color: #ffff; 
+      color: #ffff;
     `}
 
   ${(props) =>

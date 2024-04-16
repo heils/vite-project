@@ -18,7 +18,7 @@ const StyledLabel = styled.span<LabelProps>`
   ${(props) =>
     props.primary &&
     css`
-      color: #000000; 
+      color: #000000;
     `}
   ${(props) =>
     props.disabled &&

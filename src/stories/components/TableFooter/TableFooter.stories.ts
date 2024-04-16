@@ -1,15 +1,15 @@
-import { Meta, StoryObj } from '@storybook/react';
-import TableFooter from './TableFooter';
+import { Meta, StoryObj } from "@storybook/react";
+import TableFooter from "./TableFooter";
 
 const meta: Meta = {
-  title: 'Components/TableFooter',
+  title: "Components/TableFooter",
   component: TableFooter,
-  tags: ['autodocs'],
+  tags: ["autodocs"],
   argTypes: {
-    backgroundColor: { control: 'color' },
+    backgroundColor: { control: "color" },
   },
   parameters: {
-    layout: 'centered',
+    layout: "centered",
   },
 } satisfies Meta<typeof TableFooter>;
 
@@ -18,16 +18,14 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-    args: {
-      disabled: false,
-      content: 'Footer content',
-    },
-  };
-  export const Disabled: Story = {
-    args:{
-      disabled: true,
-      content: 'Footer content',
-    },
-  };
-  
-
+  args: {
+    disabled: false,
+    content: "Footer content",
+  },
+};
+export const Disabled: Story = {
+  args: {
+    disabled: true,
+    content: "Footer content",
+  },
+};

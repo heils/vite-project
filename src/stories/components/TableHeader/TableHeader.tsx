@@ -1,12 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
-import { TableHeaderProps } from './TableHeader.types';
+import React from "react";
+import styled from "styled-components";
+import { TableHeaderProps } from "./TableHeader.types";
 
 const StyledTableHeader = styled.th`
   padding: 8px;
   text-align: left;
-  background-color: blue; 
-  color: white; 
+  background-color: blue;
+  color: white;
   border-bottom: 1px solid gray;
 `;
 
